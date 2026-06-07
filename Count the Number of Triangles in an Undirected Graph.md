@@ -1,3 +1,4 @@
+
 # Ex. No: 18E - Count the Number of Triangles in an Undirected Graph
 
 ## AIM:
@@ -22,10 +23,33 @@ Also, initialize a matrix `aux3` to store the cube of the adjacency matrix (i.e.
 ## PYTHON PROGRAM
 
 ```
+Reg.No: 212223060280
+Name: SURYA P
+def multiply(A, B, C):
+    global V
+    for i in range(V):
+        for j in range(V):
+            C[i][j] = 0
+            for k in range(V):
+                C[i][j] += A[i][k] * B[k][j]
+
+def getTrace(graph):
+    global V trace = 0
+    for i in range(V):
+        trace += graph[i][i] return trace
+
+def triangleInGraph(graph):
+    global V aux2 = [[None] * V
+    for i in range(V)] aux3=[[None]*V for i in range(V)]
+        for i in range(V):
+          for j in range(V): aux2[i][j] = aux3[i][j] = 0      multiply(graph, graph, aux2) multiply(graph,aux2,aux3) trace=getTrace(aux3) return trace // 6
+
+V = int(input()) graph = [[0, 1, 1, 0], [1, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]]
+
+print("Total number of Triangle in Graph :", triangleInGraph(graph))
 ```
 
 ## OUTPUT
-```
-```
-
+<img width="882" height="158" alt="image" src="https://github.com/user-attachments/assets/ecb3fa60-e00c-46b5-b5a2-7d3dfce34144" />
 ## RESULT
+The program to count the number of triangles in an undirected graph has been implemented and executed successfully.
